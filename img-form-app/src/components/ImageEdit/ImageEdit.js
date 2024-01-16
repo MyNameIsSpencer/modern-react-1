@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function ImageEdit({ iamge, onSubmit }) {
+function ImageEdit({ image, onSubmit }) {
   const [title, setTitle] = useState(image.title);
 
   const handleChange = (event) => {
@@ -10,7 +10,7 @@ function ImageEdit({ iamge, onSubmit }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    onSubmit(book.id, title);
+    onSubmit(image.id, title);
   };
 
   return (

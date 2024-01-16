@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ImageEdit from '../ImageEdit/ImageEdit';
+import './ImageItem.css';
 
 function ImageItem({ image, onDelete, onEdit }) {
   const [showEdit, setShowEdit] = useState(false);

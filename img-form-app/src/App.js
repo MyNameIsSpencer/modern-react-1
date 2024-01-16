@@ -39,8 +39,8 @@ function App() {
 
   return (
     <div className="base-app-class">
-      <h1>Reading List</h1>
-      {/* <ImageList onEdit={editImageById} images={images} onDelete={deleteImageById} /> */}
+      <h1>Image List</h1>
+      <ImageList onEdit={editImageById} images={images} onDelete={deleteImageById} />
       <ImageCreate onCreate={createImage} />
     </div>
   );
