@@ -4,13 +4,9 @@ import { createContext, useState, useEffect } from 'react';
 const NavigationContext = createContext();
 
 function NavigationProvider({ children }) {
-  const [currentPath, setCurrentPath] = useState('localhost:3000');
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
-    // console.warn('HEEERRR')
-    // console.log(window.location.pathname);
-    // console.log(currentPath)
-
     const handler = () => {
       setCurrentPath(window.location.pathname)
     };

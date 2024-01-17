@@ -4,12 +4,17 @@ import NavigationContext from '../context/navigation';
 
 function Route({ path, children }) {
   const { currentPath } = useContext(NavigationContext);
+  console.warn('HEERER')
+  console.log(path);
+  console.log(children);
+  console.log(currentPath);
 
-  if (path === currentPath) {
-    return children;
-  }
+  return children;
+  // if (path === currentPath) {
+  //   return children;
+  // }
   
-  return null;
+  // return null;
 }
 
 
