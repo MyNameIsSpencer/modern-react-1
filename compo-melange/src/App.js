@@ -2,6 +2,7 @@
 import './App.css';
 import Route from './components/Route';
 import Practer from './components/Practer';
+import ButtonGroup from './components/Button/ButtonGroup';
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
         <Practer />
       </Route>
 
+      <Route path="button-group">
+        <ButtonGroup />
+      </Route>
 
-
-
+      
     </div>
   );
 }

@@ -3,7 +3,6 @@ import './Button.scss';
 
 export const ButtonTypesEnum = {
   primary: 'primary',
-  secondary: 'secondary',
   success: 'success',
   warning: 'warning',
   danger: 'danger',
@@ -22,6 +21,9 @@ export const ButtonSizesEnum = {
   big: 'big',
 }
 
+// implement hover, click state (also focused?)
+
+
 function Button({
   children,
   type, // enum
@@ -37,6 +39,9 @@ function Button({
   ...rest
 }) {
 
+  console.log('Button')
+
+
   const chooseButtonClasses = () => {
     // type, gradient, border, shape, shadow, size
     let buttonType = type || ButtonTypesEnum.primary;
@@ -47,14 +52,10 @@ function Button({
 
     switch(type) {
       case ButtonTypesEnum.success:
-        // hollow, // boolean, mix with type
-        // border, // boolean, colour determined by type
-        // gradient, // boolean, colours determined by type
-
-        // if hollow, not gradient, && border auto true
         if (hollow) {
           buttonStyling += ' hollow hollow-success border'
         } else {
+          buttonStyling += ' text-white';
           buttonStyling += gradient ? ' success-gradient' : ' success';
           buttonStyling += border ? ' border' : '';
         }
@@ -63,6 +64,7 @@ function Button({
         if (hollow) {
           buttonStyling += ' hollow hollow-warning border'
         } else {
+          buttonStyling += ' text-white';
           buttonStyling += gradient ? ' warning-gradient' : ' warning';
           buttonStyling += border ? ' border' : '';
         }
@@ -71,6 +73,7 @@ function Button({
         if (hollow) {
           buttonStyling += ' hollow hollow-danger border'
         } else {
+          buttonStyling += ' text-white';
           buttonStyling += gradient ? ' danger-gradient' : ' danger';
           buttonStyling += border ? ' border' : '';
         }
@@ -79,6 +82,7 @@ function Button({
                if (hollow) {
           buttonStyling += ' hollow hollow-disabled border'
         } else {
+          buttonStyling += ' text-white';
           buttonStyling += gradient ? ' disabled-gradient' : ' disabled';
           buttonStyling += border ? ' border' : '';
         }
@@ -87,6 +91,7 @@ function Button({
         if (hollow) {
           buttonStyling += ' hollow hollow-primary border'
         } else {
+          buttonStyling += ' text-white';
           buttonStyling += gradient ? ' primary-gradient' : ' primary';
           buttonStyling += border ? ' border' : '';
         }
@@ -105,16 +110,15 @@ function Button({
 
     // size, // enum: small, medium, big
     switch(size) {
-      case ButtonShapesEnum.small:
+      case ButtonSizesEnum.small:
         buttonStyling += ' small';
         break;
-      case ButtonShapesEnum.big:
+      case ButtonSizesEnum.big:
         buttonStyling += ' big';
         break;
       default: // medium
         buttonStyling += ' medium';
     }
-
 
     return buttonStyling;
 

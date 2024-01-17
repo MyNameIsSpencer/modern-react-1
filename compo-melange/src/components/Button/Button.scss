@@ -1,7 +1,8 @@
 
 
 .shadow {
-  box-shadow: 4px, 4px, 4px, 4px;
+  box-shadow: 20px, 20px, 4px black;
+  // box-shadow: 20px, 20px, 4px lightblue;
 }
 
 
@@ -10,7 +11,14 @@
 }
 
 .border {
-  border-width: 3px;
+  display: inline-block;
+
+  border-width: 4px;
+}
+
+.text-white {
+  color: white;
+  display: inline-block;
 }
 
 .primary {
@@ -18,13 +26,13 @@
   border-color: rgb(26, 94, 162);
   // border-color: royalblue;
 }
-
 .hollow-primary {
+  font-weight: 800;
   color: dodgerblue;
   border-color: dodgerblue;
 }
-
 .primary-gradient {
+  color: rgb(26, 94, 162);
   background-image: linear-gradient(140deg, lightskyblue, dodgerblue);
   // linear-gradient: (140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%)
   border-color: rgb(26, 94, 162);
@@ -37,13 +45,13 @@
   border-color: seagreen;
   // border-color: royalblue;
 }
-
 .hollow-success {
+  font-weight: 800;
   color: limegreen;
   border-color: limegreen;
 }
-
 .success-gradient {
+  color: seagreen;
   background-image: linear-gradient(140deg, palegreen, limegreen);
   // linear-gradient: (140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%)
   border-color: seagreen;
@@ -55,13 +63,14 @@
   border-color: orangered;
   // border-color: royalblue;
 }
-
 .hollow-warning {
+  font-weight: 800;
   color: coral;
   border-color: coral;
 }
 // darkorange tomato
 .warning-gradient {
+  color: orangered;
   background-image: linear-gradient(140deg, orange, coral);
   border-color: orangered;
 }
@@ -70,13 +79,13 @@
   background-color: red;
   border-color: crimson;
 }
-
 .hollow-danger {
+  font-weight: 800;
   color: red;
   border-color: red;
 }
-
 .danger-gradient {
+  color: white;
   background-image: linear-gradient(140deg, indianred, red);
   border-color: crimson;
   // border-color: royalblue;
@@ -88,14 +97,14 @@
   border-color: gray;
   // border-color: royalblue;
 }
-
 .hollow-disabled {
+  font-weight: 800;
   color: gray;
   border-color: gray;
 }
-
 .disabled-gradient {
-  background-image: linear-gradient(140deg, lightblue, lightgray);
+  color: gray;
+  background-image: linear-gradient(140deg, aliceblue, lightgray);
   border-color: gray;
 }
 
@@ -104,24 +113,27 @@
 }
 
 .rounded {
-  border-radius: 3px;
-}
-
-.pill {
   border-radius: 10px;
 }
 
+.pill {
+  border-radius: 40px;
+}
+
 .small {
-  height: 20px;
-  width: 40px;
+  font-size: 16px;
+  height: 50px;
+  width: 100px;
 }
 
 .medium {
-  height: 20px;
-  width: 60px;
+  font-size: 16px;
+  height: 60px;
+  width: 150px;
 }
 
 .big {
-  height: 30px;
+  font-size: 18px;
+  height: 70px;
   width: 200px;
 }
