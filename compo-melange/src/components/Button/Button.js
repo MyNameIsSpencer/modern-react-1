@@ -57,7 +57,7 @@ function Button({
         } else {
           buttonStyling += ' text-white';
           buttonStyling += gradient ? ' success-gradient' : ' success';
-          buttonStyling += border ? ' border' : '';
+          buttonStyling += border ? ' border' : ' zero-border';
         }
         break;
       case ButtonTypesEnum.warning:
@@ -66,7 +66,7 @@ function Button({
         } else {
           buttonStyling += ' text-white';
           buttonStyling += gradient ? ' warning-gradient' : ' warning';
-          buttonStyling += border ? ' border' : '';
+          buttonStyling += border ? ' border' : ' zero-border';
         }
         break;
       case ButtonTypesEnum.danger:
@@ -75,7 +75,7 @@ function Button({
         } else {
           buttonStyling += ' text-white';
           buttonStyling += gradient ? ' danger-gradient' : ' danger';
-          buttonStyling += border ? ' border' : '';
+          buttonStyling += border ? ' border' : ' zero-border';
         }
         break;
       case ButtonTypesEnum.disabled:
@@ -84,7 +84,7 @@ function Button({
         } else {
           buttonStyling += ' text-white';
           buttonStyling += gradient ? ' disabled-gradient' : ' disabled';
-          buttonStyling += border ? ' border' : '';
+          buttonStyling += border ? ' border' : ' zero-border';
         }
         break;
       default: // primary
@@ -93,7 +93,7 @@ function Button({
         } else {
           buttonStyling += ' text-white';
           buttonStyling += gradient ? ' primary-gradient' : ' primary';
-          buttonStyling += border ? ' border' : '';
+          buttonStyling += border ? ' border' : ' zero-border';
         }
     }
 
