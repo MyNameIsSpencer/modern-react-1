@@ -20,20 +20,17 @@ export default function Accordion({ data }) {
     const isExpanded = index === activeIndex;
 
     return (
-      <div key={section.id}>
+      <div className='section-container' key={section.id}>
         {section.id}
-        
         <div onClick={() => handleClick(index)}>
           {section.label}
         </div>
         {isExpanded && <div className="">{section.content}</div>} 
-
       </div>
     );
   });
 
   return <div>{sections}</div>;
-
 
 }
 
