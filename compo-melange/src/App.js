@@ -3,6 +3,7 @@ import './App.css';
 import Route from './components/Route';
 import Practer from './components/Practer';
 import ButtonGroup from './components/Button/ButtonGroup';
+import CounterPrac from './components/CounterPrac/CounterPrac';
 import Accordion1 from './components/Accordion/Accordion1';
 import Accordion2 from './components/Accordion/Accordion2';
 import DataTable1 from './components/DataTable/DataTable1';
@@ -14,6 +15,11 @@ function App() {
       {/* <Route path="practer">
         <Practer />
       </Route> */}
+      <Route path="counter-prac">
+        <CounterPrac initialCount={89} />
+      </Route>
+      <div style={{height: '50px'}}></div>
+
       <Route path="table1">
         <DataTable1 />
       </Route>
